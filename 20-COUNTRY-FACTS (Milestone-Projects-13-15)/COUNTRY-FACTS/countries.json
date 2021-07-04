@@ -1,0 +1,33 @@
+{
+    "results" : [
+        {   "name" : "India",
+            "capital" : "New Delhi",
+            "Population" : 14200004
+        },
+        {
+            "name" : "United States",
+            "capital" : "Washington, D.C.",
+            "Population" : 705749
+        },
+        {
+            "name" : "Japan",
+            "capital" : "Tokyo",
+            "Population" : 13929286
+        },
+        {
+            "name" : "Sweden",
+            "capital" : "Stockholm",
+            "Population" : 962154
+        },
+        {
+            "name" : "United Kingdom",
+            "capital" : "London",
+            "Population" : 8908081
+        },
+        {
+            "name" : "Mexico",
+            "capital" : "Mexico city",
+            "Population" : 8918653
+        }
+    ]
+}
