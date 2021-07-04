@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yZI-0q-KAm">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="SCx-vO-CUC">
+            <objects>
+                <collectionViewController id="Vij-6I-bhs" customClass="ViewController" customModule="Pairs_" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SxE-AM-unT">
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N6o-hg-HhI">
+                            <size key="itemSize" width="180" height="180"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="y9A-Ab-6wY" customClass="CardCollectionViewCell" customModule="Pairs_" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="M7J-Gm-eTv">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fa5-Yg-kt4">
+                                            <rect key="frame" x="-3" y="0.0" width="257" height="250"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="genericCard" translatesAutoresizingMaskIntoConstraints="NO" id="0r5-Bu-KJr">
+                                            <rect key="frame" x="0.0" y="0.0" width="257" height="250"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                    <constraints>
+                                        <constraint firstItem="fa5-Yg-kt4" firstAttribute="leading" secondItem="M7J-Gm-eTv" secondAttribute="leading" constant="-3" id="0PQ-7m-cDU"/>
+                                        <constraint firstItem="0r5-Bu-KJr" firstAttribute="top" secondItem="M7J-Gm-eTv" secondAttribute="top" id="5bQ-9G-gDE"/>
+                                        <constraint firstItem="fa5-Yg-kt4" firstAttribute="top" secondItem="0r5-Bu-KJr" secondAttribute="top" id="9j7-qS-P3f"/>
+                                        <constraint firstItem="fa5-Yg-kt4" firstAttribute="centerX" secondItem="M7J-Gm-eTv" secondAttribute="centerX" id="PbH-l4-QVY"/>
+                                        <constraint firstItem="fa5-Yg-kt4" firstAttribute="bottom" secondItem="0r5-Bu-KJr" secondAttribute="bottom" id="n7i-Fs-OQx"/>
+                                        <constraint firstItem="0r5-Bu-KJr" firstAttribute="centerY" secondItem="M7J-Gm-eTv" secondAttribute="centerY" id="oIP-BI-sCs"/>
+                                        <constraint firstAttribute="trailing" secondItem="0r5-Bu-KJr" secondAttribute="trailing" constant="-7" id="ryr-2F-zg2"/>
+                                        <constraint firstItem="0r5-Bu-KJr" firstAttribute="leading" secondItem="M7J-Gm-eTv" secondAttribute="leading" id="tri-jE-m4T"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="250" height="250"/>
+                                <connections>
+                                    <outlet property="backCardView" destination="0r5-Bu-KJr" id="gxM-mU-akF"/>
+                                    <outlet property="frontCardView" destination="fa5-Yg-kt4" id="60r-mO-kvl"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Vij-6I-bhs" id="ds1-FD-z5h"/>
+                            <outlet property="delegate" destination="Vij-6I-bhs" id="JmV-Js-p3V"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="T9G-Js-O6s"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5h0-5y-NO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350.5555555555554" y="157.77777777777777"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uGM-7r-g6r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yZI-0q-KAm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="icZ-ei-BA3">
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vij-6I-bhs" kind="relationship" relationship="rootViewController" id="vnP-MG-liS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqe-Cx-lXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632.77777777777771" y="157.77777777777777"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="genericCard" width="300" height="300"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
