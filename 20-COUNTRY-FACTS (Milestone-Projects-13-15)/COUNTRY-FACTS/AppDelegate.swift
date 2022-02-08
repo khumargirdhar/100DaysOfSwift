@@ -2,18 +2,21 @@
 //  AppDelegate.swift
 //  COUNTRY-FACTS
 //
-//  Created by Khumar Girdhar on 20/05/21.
+//  Created by Khumar Girdhar on 07/10/21.
 //
 
 import UIKit
+import Firebase
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        UNUserNotificationCenter.current().delegate = self //To show notifications even when the app is in foreground.
         return true
     }
 
